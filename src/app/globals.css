@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-ui: "Cairo", "Tajawal", system-ui, -apple-system, sans-serif;
+  --font-quran: "Amiri Quran", "Amiri", "Scheherazade New", serif;
+  --background: #fbfaf7;
+  --foreground: #1a1a1a;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ui);
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+
+.quran {
+  font-family: var(--font-quran);
+  font-size: 1.85rem;
+  line-height: 2.6;
+  letter-spacing: 0.01em;
+  direction: rtl;
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-lg px-5 py-2.5 font-semibold transition-colors;
+  }
+  .btn-primary {
+    @apply bg-brand-600 text-white hover:bg-brand-700;
+  }
+  .btn-secondary {
+    @apply bg-brand-50 text-brand-800 hover:bg-brand-100 border border-brand-200;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-brand-100 shadow-sm p-6 hover:shadow-md transition-shadow;
+  }
+}
+
+/* Tajweed rule color utilities (used by RuleHighlight) */
+.rule-idhhar { background: rgba(14, 165, 233, 0.18); color: #0369a1; }
+.rule-idgham { background: rgba(34, 197, 94, 0.18); color: #166534; }
+.rule-iqlab { background: rgba(249, 115, 22, 0.20); color: #9a3412; }
+.rule-ikhfa { background: rgba(168, 85, 247, 0.18); color: #6b21a8; }
+.rule-qalqalah { background: rgba(239, 68, 68, 0.18); color: #991b1b; }
+.rule-madd { background: rgba(234, 179, 8, 0.22); color: #854d0e; }
+.rule-tafkheem { background: rgba(139, 92, 246, 0.18); color: #5b21b6; }
+.rule-tarqeeq { background: rgba(6, 182, 212, 0.18); color: #155e75; }
