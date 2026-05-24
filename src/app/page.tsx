@@ -38,17 +38,14 @@ export default function HomePage() {
 
       <section className="grid sm:grid-cols-3 gap-4">
         <Feature
-          icon="📖"
           title={`${total} دروس`}
           body="دروس مرتَّبة من أساسيات التجويد إلى أهم الأحكام التطبيقية."
         />
         <Feature
-          icon="🎯"
           title="اختبارات تفاعلية"
           body="بعد كل درس اختبار قصير يصحَّح فوراً مع شرح الإجابات."
         />
         <Feature
-          icon="📊"
           title="تتبُّع تقدّمك"
           body="يحفظ المتصفّح ما أتممته من دروس ودرجاتك في الاختبارات."
         />
@@ -57,10 +54,9 @@ export default function HomePage() {
   );
 }
 
-function Feature({ icon, title, body }: { icon: string; title: string; body: string }) {
+function Feature({ title, body }: { title: string; body: string }) {
   return (
     <div className="card text-center">
-      <div className="text-3xl mb-2">{icon}</div>
       <h3 className="text-xl font-bold text-brand-700 mb-2">{title}</h3>
       <p className="text-gray-700 leading-7">{body}</p>
     </div>
