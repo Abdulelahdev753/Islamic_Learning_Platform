@@ -5,10 +5,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "الرئيسية" },
-  { href: "/lessons", label: "الدروس" },
-  { href: "/quizzes", label: "الاختبارات" },
   { href: "/library", label: "المكتبة" },
-  { href: "/progress", label: "تقدّمي" },
 ];
 
 export function Header() {

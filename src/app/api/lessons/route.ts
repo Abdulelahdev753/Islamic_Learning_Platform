@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { getAllLessons } from "@/lib/content";
 
 export function GET() {
-  return NextResponse.json({ lessons: getAllLessons() });
+  return NextResponse.json({ error: "not_available" }, { status: 403 });
 }

@@ -1,10 +1,6 @@
-import Link from "next/link";
-import { getAllLessons } from "@/lib/content";
 import SplitText from "@/components/SplitText";
 
 export default function HomePage() {
-  const lessons = getAllLessons();
-  const total = lessons.length;
 
   return (
     <div className="space-y-12">
@@ -26,19 +22,16 @@ export default function HomePage() {
           منصّة تفاعلية لتعليم أحكام التجويد بأسلوب ميسَّر، مع أمثلة من القرآن الكريم
           واختبارات قصيرة لترسيخ ما تتعلّمه.
         </p>
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <Link href="/lessons" className="btn btn-primary">
-            ابدأ التعلّم
-          </Link>
-          <Link href="/quizzes" className="btn btn-secondary">
-            تصفّح الاختبارات
-          </Link>
+        <div className="mt-8 flex items-center justify-center">
+          <span className="inline-block bg-amber-50 text-amber-800 border border-amber-300 rounded-full px-6 py-3 text-lg font-bold">
+            قريبًا...
+          </span>
         </div>
       </section>
 
       <section className="grid sm:grid-cols-3 gap-4">
         <Feature
-          title={`${total} دروس`}
+          title="دروس متنوعة"
           body="دروس مرتَّبة من أساسيات التجويد إلى أهم الأحكام التطبيقية."
         />
         <Feature
