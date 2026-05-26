@@ -19,10 +19,7 @@ export function Header() {
           className="flex items-center gap-2 text-brand-700 font-extrabold text-xl"
           onClick={() => setOpen(false)}
         >
-          <span className="inline-block w-8 h-8 rounded-full bg-brand-600 text-white grid place-items-center text-sm">
-            ﺗ
-          </span>
-          <span>منصة التجويد</span>
+          <span>منصة تعليم التجويد</span>
         </Link>
 
         {/* Desktop nav */}
