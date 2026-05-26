@@ -21,7 +21,7 @@ export function RuleHighlight({
   showLabel?: boolean;
 }) {
   return (
-    <span className={`rule-${rule} px-1.5 py-0.5 rounded font-bold`}>
+    <span className={`rule-${rule} rule-pill font-bold`}>
       {children}
       {showLabel && (
         <sub className="mr-1 text-xs font-normal opacity-80">({LABELS[rule]})</sub>
