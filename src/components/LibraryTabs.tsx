@@ -54,7 +54,7 @@ export function LibraryTabs() {
       </header>
 
       {/* Category switcher */}
-      <div className="flex flex-wrap gap-2 border-b border-brand-100 pb-1">
+      <div className="flex flex-wrap gap-2 rounded-xl border border-brand-200 bg-brand-50/60 p-1.5">
         <TabButton active={tab === "digital"} onClick={() => setTab("digital")}>
           المكتبة الرقمية
         </TabButton>
@@ -193,10 +193,10 @@ function TabButton({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-t-lg px-4 py-2.5 text-sm font-bold transition-colors sm:text-base ${
+      className={`flex-1 rounded-lg px-4 py-2.5 text-sm font-bold transition-colors sm:text-base ${
         active
-          ? "bg-brand-600 text-white"
-          : "text-brand-700 hover:bg-brand-50"
+          ? "bg-brand-700 text-white shadow-sm"
+          : "bg-white text-brand-800 border border-brand-200 hover:bg-brand-100 hover:border-brand-400"
       }`}
     >
       {children}

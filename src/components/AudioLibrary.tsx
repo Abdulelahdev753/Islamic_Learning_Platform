@@ -17,6 +17,59 @@ function formatTime(seconds: number): string {
   return `${m}:${String(s).padStart(2, "0")}`;
 }
 
+function IconPlay({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M8 5.5v13a1 1 0 0 0 1.55.83l10-6.5a1 1 0 0 0 0-1.66l-10-6.5A1 1 0 0 0 8 5.5z" />
+    </svg>
+  );
+}
+
+function IconPause({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <rect x="6.5" y="5" width="4" height="14" rx="1.2" />
+      <rect x="13.5" y="5" width="4" height="14" rx="1.2" />
+    </svg>
+  );
+}
+
+function IconPrev({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M7 5a1 1 0 0 1 1 1v5.2l9.45-6.04A1 1 0 0 1 19 6v12a1 1 0 0 1-1.55.84L8 12.8V18a1 1 0 1 1-2 0V6a1 1 0 0 1 1-1z" />
+    </svg>
+  );
+}
+
+function IconNext({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M17 5a1 1 0 0 0-1 1v5.2L6.55 5.16A1 1 0 0 0 5 6v12a1 1 0 0 0 1.55.84L16 12.8V18a1 1 0 1 0 2 0V6a1 1 0 0 0-1-1z" />
+    </svg>
+  );
+}
+
 type ReciterMoshaf = {
   // Resolved server URL for the reciter's hafs/murattal moshaf.
   server: string;
@@ -248,9 +301,9 @@ export function AudioLibrary() {
                 {isCurrent && loading ? (
                   <span className="block h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
                 ) : isPlaying ? (
-                  "⏸"
+                  <IconPause className="h-4 w-4" />
                 ) : isCurrent ? (
-                  "▶"
+                  <IconPlay className="h-4 w-4" />
                 ) : (
                   s.id
                 )}
@@ -292,7 +345,7 @@ export function AudioLibrary() {
                   className="grid h-9 w-9 place-items-center rounded-full text-brand-700 hover:bg-brand-50 disabled:opacity-30"
                   aria-label="السورة السابقة"
                 >
-                  ⏮
+                  <IconPrev className="h-5 w-5" />
                 </button>
                 <button
                   type="button"
@@ -309,9 +362,9 @@ export function AudioLibrary() {
                   {loading ? (
                     <span className="block h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
                   ) : playing ? (
-                    "⏸"
+                    <IconPause className="h-6 w-6" />
                   ) : (
-                    "▶"
+                    <IconPlay className="h-6 w-6" />
                   )}
                 </button>
                 <button
@@ -321,7 +374,7 @@ export function AudioLibrary() {
                   className="grid h-9 w-9 place-items-center rounded-full text-brand-700 hover:bg-brand-50 disabled:opacity-30"
                   aria-label="السورة التالية"
                 >
-                  ⏭
+                  <IconNext className="h-5 w-5" />
                 </button>
               </div>
             </div>
