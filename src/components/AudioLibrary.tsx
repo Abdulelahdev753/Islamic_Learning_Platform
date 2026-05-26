@@ -180,7 +180,6 @@ export function AudioLibrary() {
                     : "border-brand-100 bg-white hover:border-brand-300 hover:bg-brand-50/50"
                 }`}
               >
-                <span className="text-2xl">{r.emoji}</span>
                 <span className="flex-1 min-w-0">
                   <span className="block font-bold text-brand-800 truncate">
                     {r.nameAr}
@@ -198,7 +197,6 @@ export function AudioLibrary() {
       {/* Selected reciter header + search */}
       <div className="card">
         <div className="flex items-center gap-4">
-          <div className="text-4xl">{selectedReciter.emoji}</div>
           <div className="flex-1">
             <h3 className="text-xl font-bold text-brand-800">
               {selectedReciter.nameAr}

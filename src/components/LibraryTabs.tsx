@@ -10,7 +10,6 @@ type Book = {
   author: string;
   description: string;
   file: string;
-  cover: string;
 };
 
 const quranSciencesBooks: Book[] = [
@@ -20,7 +19,6 @@ const quranSciencesBooks: Book[] = [
     description:
       "كتاب مختصر في أحكام التجويد بأسلوب سهل، يصلح للمبتدئين والمتعلّمين على حدٍّ سواء.",
     file: "/books/tajweed-muyassar.pdf",
-    cover: "📗",
   },
   {
     title: "التفسير الميسَّر",
@@ -28,7 +26,6 @@ const quranSciencesBooks: Book[] = [
     description:
       "تفسير مختصر لمعاني آيات القرآن الكريم بأسلوب سهل واضح، صادر عن مجمع الملك فهد لطباعة المصحف الشريف.",
     file: "/books/ar_tafseer_moyasser.pdf",
-    cover: "📖",
   },
 ];
 
@@ -39,7 +36,6 @@ const duaBooks: Book[] = [
     description:
       "مجموعة منتقاة من الأدعية الواردة في القرآن والسنّة الصحيحة لتلازم المسلم في يومه.",
     file: "/books/sahih-adiyah.pdf",
-    cover: "📘",
   },
 ];
 
@@ -60,10 +56,10 @@ export function LibraryTabs() {
       {/* Category switcher */}
       <div className="flex flex-wrap gap-2 border-b border-brand-100 pb-1">
         <TabButton active={tab === "digital"} onClick={() => setTab("digital")}>
-          📚 المكتبة الرقمية
+          المكتبة الرقمية
         </TabButton>
         <TabButton active={tab === "audio"} onClick={() => setTab("audio")}>
-          🎧 المكتبة الصوتية للقرآن الكريم
+          المكتبة الصوتية للقرآن الكريم
         </TabButton>
       </div>
 
@@ -102,16 +98,13 @@ export function LibraryTabs() {
                   href={`/library/hadith/${book.slug}`}
                   className="card flex flex-col hover:border-brand-400 hover:shadow-md transition-all"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="text-4xl">{book.cover}</div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-brand-800 leading-tight">
-                        {book.titleAr}
-                      </h3>
-                      <p className="text-gray-600 text-xs mt-1">
-                        {book.authorAr}
-                      </p>
-                    </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-brand-800 leading-tight">
+                      {book.titleAr}
+                    </h3>
+                    <p className="text-gray-600 text-xs mt-1">
+                      {book.authorAr}
+                    </p>
                   </div>
                   <p className="text-gray-700 text-sm leading-6 mt-3 flex-1">
                     {book.descriptionAr}
@@ -158,14 +151,11 @@ function PdfBookSection({
       <div className="grid sm:grid-cols-2 gap-4">
         {books.map((book) => (
           <div key={book.file} className="card flex flex-col">
-            <div className="flex items-start gap-3">
-              <div className="text-4xl">{book.cover}</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-brand-800">
-                  {book.title}
-                </h3>
-                <p className="text-gray-600 text-sm mt-1">{book.author}</p>
-              </div>
+            <div>
+              <h3 className="text-xl font-bold text-brand-800">
+                {book.title}
+              </h3>
+              <p className="text-gray-600 text-sm mt-1">{book.author}</p>
             </div>
             <p className="text-gray-700 leading-7 mt-3 flex-1">
               {book.description}

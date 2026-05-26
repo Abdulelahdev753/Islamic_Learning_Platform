@@ -131,7 +131,6 @@ export type Reciter = {
   key: string;
   reciterId: number; // mp3quran.net reciter id
   nameAr: string;
-  emoji: string;
   fallbackServer: string; // used if the API call fails
 };
 
@@ -141,28 +140,24 @@ export const RECITERS: Reciter[] = [
     key: "minshawi",
     reciterId: 112,
     nameAr: "محمد صديق المنشاوي",
-    emoji: "🎙️",
     fallbackServer: "https://server10.mp3quran.net/minsh/",
   },
   {
     key: "maher",
     reciterId: 102,
     nameAr: "ماهر المعيقلي",
-    emoji: "🕌",
     fallbackServer: "https://server12.mp3quran.net/maher/",
   },
   {
     key: "balilah",
     reciterId: 217,
     nameAr: "بندر بليلة",
-    emoji: "🌙",
     fallbackServer: "https://server6.mp3quran.net/balilah/",
   },
   {
     key: "ayyoub",
     reciterId: 109,
     nameAr: "محمد أيوب",
-    emoji: "📿",
     fallbackServer: "https://server8.mp3quran.net/ayyub/",
   },
 ];

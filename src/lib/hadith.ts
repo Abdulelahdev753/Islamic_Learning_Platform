@@ -4,7 +4,6 @@ export type HadithBookMeta = {
   titleAr: string;
   authorAr: string;
   descriptionAr: string;
-  cover: string;
   count: number;
 };
 
@@ -15,7 +14,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "صحيح البخاري",
     authorAr: "الإمام محمد بن إسماعيل البخاري",
     descriptionAr: "أصحُّ الكتب بعد كتاب الله، جمع فيه الإمام البخاري ما صحَّ عنده من حديث رسول الله ﷺ.",
-    cover: "📕",
     count: 7563,
   },
   {
@@ -24,7 +22,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "صحيح مسلم",
     authorAr: "الإمام مسلم بن الحجاج النيسابوري",
     descriptionAr: "ثاني أصحِّ الكتب بعد صحيح البخاري في رواية الحديث الشريف.",
-    cover: "📗",
     count: 7563,
   },
   {
@@ -33,7 +30,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "سنن أبي داود",
     authorAr: "الإمام أبو داود السجستاني",
     descriptionAr: "أحد كتب السنن الأربعة، يُعنى بأحاديث الأحكام الفقهية.",
-    cover: "📘",
     count: 5274,
   },
   {
@@ -42,7 +38,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "جامع الترمذي",
     authorAr: "الإمام محمد بن عيسى الترمذي",
     descriptionAr: "من أهمِّ كتب السنن، يجمع بين الفقه والحديث وذكر مذاهب العلماء.",
-    cover: "📙",
     count: 3956,
   },
   {
@@ -51,7 +46,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "سنن النسائي",
     authorAr: "الإمام أحمد بن شعيب النسائي",
     descriptionAr: "أحد كتب السنن الأربعة، يمتاز بدقَّة الانتقاء وقلَّة الأحاديث الضعيفة.",
-    cover: "📔",
     count: 5761,
   },
   {
@@ -60,7 +54,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "سنن ابن ماجه",
     authorAr: "الإمام محمد بن يزيد ابن ماجه",
     descriptionAr: "أحد كتب السنن الأربعة، يشتمل على كثير من الأحاديث الفقهية.",
-    cover: "📒",
     count: 4341,
   },
   {
@@ -69,7 +62,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "موطأ الإمام مالك",
     authorAr: "الإمام مالك بن أنس",
     descriptionAr: "من أوائل كتب الحديث، جمع فيه الإمام مالك السنن وآثار الصحابة والتابعين.",
-    cover: "📓",
     count: 1851,
   },
   {
@@ -78,7 +70,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "مسند الإمام أحمد",
     authorAr: "الإمام أحمد بن حنبل",
     descriptionAr: "أوسع كتب المسانيد، رتَّبه الإمام أحمد على أسماء الصحابة الرواة.",
-    cover: "📚",
     count: 26363,
   },
   {
@@ -87,7 +78,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "سنن الدارمي",
     authorAr: "الإمام عبد الله بن عبد الرحمن الدارمي",
     descriptionAr: "من كتب السنن المعتبرة، يجمع بين الفقه والحديث.",
-    cover: "📖",
     count: 3503,
   },
   {
@@ -96,7 +86,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "رياض الصالحين",
     authorAr: "الإمام يحيى بن شرف النووي",
     descriptionAr: "كتاب جامع لأحاديث الترغيب والترهيب والأخلاق والآداب من أصحِّ مصادر السُّنَّة.",
-    cover: "📜",
     count: 1896,
   },
   {
@@ -105,7 +94,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "الشمائل المحمدية",
     authorAr: "الإمام الترمذي",
     descriptionAr: "كتاب يصف خِلْقَة النبي ﷺ وأخلاقه وعباداته وحياته اليومية.",
-    cover: "🌟",
     count: 415,
   },
   {
@@ -114,7 +102,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "بلوغ المرام",
     authorAr: "الحافظ ابن حجر العسقلاني",
     descriptionAr: "من أهمِّ كتب أحاديث الأحكام، اعتمد عليه الفقهاء وطلاب العلم.",
-    cover: "📑",
     count: 1568,
   },
   {
@@ -123,7 +110,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "الأدب المفرد",
     authorAr: "الإمام البخاري",
     descriptionAr: "كتاب جامع لأحاديث الآداب والأخلاق وحُسن المعاملة.",
-    cover: "📝",
     count: 1322,
   },
   {
@@ -132,7 +118,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "مشكاة المصابيح",
     authorAr: "الإمام الخطيب التبريزي",
     descriptionAr: "تهذيب لكتاب مصابيح السنَّة للبغوي، جامع لأحاديث الأحكام والآداب.",
-    cover: "🕯️",
     count: 6294,
   },
   {
@@ -141,7 +126,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "الأربعون النووية",
     authorAr: "الإمام يحيى بن شرف النووي",
     descriptionAr: "مجموعة من الأحاديث الجوامع التي تُعدُّ قواعد للدين، اشتهرت بحفظ طلبة العلم لها.",
-    cover: "✨",
     count: 42,
   },
   {
@@ -150,7 +134,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "الأربعون القدسية",
     authorAr: "مجموعة من العلماء",
     descriptionAr: "مجموعة من الأحاديث القدسية التي يرويها النبي ﷺ عن ربِّه عزَّ وجلَّ.",
-    cover: "🌙",
     count: 40,
   },
   {
@@ -159,7 +142,6 @@ export const hadithBooks: HadithBookMeta[] = [
     titleAr: "أربعون الشاه ولي الله الدهلوي",
     authorAr: "الشاه ولي الله الدهلوي",
     descriptionAr: "أربعون حديثًا اختارها الإمام الشاه ولي الله الدهلوي من جوامع الكَلِم.",
-    cover: "📿",
     count: 40,
   },
 ];

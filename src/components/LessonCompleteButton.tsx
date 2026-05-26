@@ -25,7 +25,7 @@ export function LessonCompleteButton({ slug }: { slug: string }) {
       className={`btn ${done ? "btn-secondary" : "btn-primary"}`}
       aria-pressed={done}
     >
-      {done ? "✓ تم إكمال الدرس — إلغاء" : "تم إكمال الدرس"}
+      {done ? "تم إكمال الدرس — إلغاء" : "تم إكمال الدرس"}
     </button>
   );
 }

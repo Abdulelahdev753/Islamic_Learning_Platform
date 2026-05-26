@@ -97,7 +97,6 @@ export function HadithReader({ book }: { book: HadithBookMeta }) {
       </div>
 
       <header className="flex items-start gap-4">
-        <div className="text-5xl leading-none">{book.cover}</div>
         <div className="flex-1">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-brand-800">
             {book.titleAr}
