@@ -47,6 +47,32 @@ body {
   }
 }
 
+/* Audio player progress slider — custom thumb for consistent look on iOS */
+.audio-progress {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.audio-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #1d5d48;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.audio-progress::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #1d5d48;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
 /* Tajweed rule color utilities (used by RuleHighlight) */
 .rule-idhhar { background: rgba(14, 165, 233, 0.18); color: #0369a1; }
 .rule-idgham { background: rgba(34, 197, 94, 0.18); color: #166534; }

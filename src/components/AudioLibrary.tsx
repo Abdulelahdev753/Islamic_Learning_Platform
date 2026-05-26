@@ -345,7 +345,7 @@ export function AudioLibrary() {
                   className="grid h-9 w-9 place-items-center rounded-full text-brand-700 hover:bg-brand-50 disabled:opacity-30"
                   aria-label="السورة السابقة"
                 >
-                  <IconPrev className="h-5 w-5" />
+                  <IconNext className="h-5 w-5" />
                 </button>
                 <button
                   type="button"
@@ -374,7 +374,7 @@ export function AudioLibrary() {
                   className="grid h-9 w-9 place-items-center rounded-full text-brand-700 hover:bg-brand-50 disabled:opacity-30"
                   aria-label="السورة التالية"
                 >
-                  <IconNext className="h-5 w-5" />
+                  <IconPrev className="h-5 w-5" />
                 </button>
               </div>
             </div>
@@ -389,7 +389,10 @@ export function AudioLibrary() {
                 step={0.1}
                 value={progress}
                 onChange={onSeek}
-                className="h-1.5 flex-1 cursor-pointer appearance-none rounded-full bg-brand-100 accent-brand-600"
+                className="audio-progress h-1.5 flex-1 cursor-pointer appearance-none rounded-full accent-brand-700"
+                style={{
+                  background: `linear-gradient(to left, #1d5d48 0%, #1d5d48 ${progress}%, #d8efe5 ${progress}%, #d8efe5 100%)`,
+                }}
                 aria-label="موضع التشغيل"
               />
               <span className="w-10 text-xs tabular-nums text-gray-500">
